@@ -124,7 +124,7 @@ export default function NavBar() {
     className="hidden md:flex rounded-md font-semibold text-base px-6 py-3 cursor-pointer"
   >
     <ShoppingBag strokeWidth={1} size={20} />
-    Visit Shop
+    Visit Store
   </Button>
 </Link>
 

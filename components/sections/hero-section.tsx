@@ -98,7 +98,7 @@ const MainHero = () => {
           className="rounded-sm font-semibold mt-4 md:hidden w-max mx-auto"
         >
           <ShoppingBag strokeWidth={1} size={20} /> 
-          Start Shopping
+          Visit Store
         </Button>
       </div>
     </div>
