@@ -1,14 +1,12 @@
 "use client";
 import { BlobHero } from "../blob.hero";
-import NavBar from "../navbar";
+import SocialProof from "./social-proof";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
-import SocialProof from "./social-proof";
 
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function HeroSectionTwo() {
   const headerRef = useRef<HTMLHeadingElement>(null);
@@ -16,10 +14,10 @@ export default function HeroSectionTwo() {
 
   useGSAP(
     () => {
-      function getScrollAmount() {
+      const getScrollAmount = () => {
         const headerWidth = headerRef.current?.scrollWidth ?? 0;
         return -(headerWidth - window.innerWidth);
-      }
+      };
 
       const headerTween = gsap.to(".big-header", {
         x: getScrollAmount,
@@ -51,71 +49,44 @@ export default function HeroSectionTwo() {
 
   return (
     <div ref={container} className="relative -z-[1]">
-      <div className="min-h-screen bg-background grid grid-rows-[min-content_1fr_auto]">
-        
-
-        <div className="grid lg:grid-cols-12 grid-cols-6 md:grid-cols-8 gap-4 md:gap-8 py-4 px-4 self-end">
-          <div className="col-span-full justify-self-center md:justify-self-start md:col-span-4">
+      <div className="min-h-screen bg-background flex flex-col justify-between">
+        {/* Hero Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6 px-4 py-8 items-center">
+          {/* Blob */}
+          <div className="flex justify-center md:justify-start md:col-span-4">
             <BlobHero />
           </div>
 
-          <div className="md:col-start-5 col-span-full grid md:block">
-            {/* Large screens */}
-            {/* Large screens */}
-<div className="hidden sm:block md:hidden lg:block">
-  <h1 className="text-5xl md:text-4xl font-bold text-center lg:text-left">
-    Discover top products from
-  </h1>
-  <h1 className="text-5xl md:text-4xl font-bold text-center lg:text-left">
-    trusted vendors worldwide
-  </h1>
-</div>
+          {/* Text */}
+          <div className="md:col-span-4 flex flex-col justify-center text-center md:text-left space-y-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+              Discover top products from trusted vendors worldwide
+            </h1>
 
-{/* Medium screens */}
-<div className="hidden md:block lg:hidden text-center md:text-left">
-  <h1 className="text-4xl sm:text-3xl font-bold">Discover top products</h1>
-  <h1 className="text-4xl sm:text-3xl font-bold">from trusted vendors</h1>
-  <h1 className="text-4xl sm:text-3xl font-bold">worldwide</h1>
-</div>
+            <p className="text-sm sm:text-base md:text-lg text-paragraph">
+              Alex Imports connects shoppers with thousands of products from multiple vendors worldwide,
+              making it easy to buy, sell, and discover new items.
+            </p>
 
-{/* Small screens */}
-<div className="sm:hidden text-center">
-  <h1 className="text-3xl font-bold">Discover top products</h1>
-  <h1 className="text-3xl font-bold">from trusted vendors</h1>
-  <h1 className="text-3xl font-bold">worldwide</h1>
-</div>
-
-
-            {/* Description */}
-            <div className="sm:hidden md:block lg:hidden my-3 text-center md:text-left">
-              <p>Alex Imports connects shoppers with thousands of</p>
-              <p>products from multiple vendors worldwide, making</p>
-              <p>it easy to buy, sell, and discover new items.</p>
-            </div>
-
-            <div className="my-3 text-center lg:text-left hidden sm:block md:hidden lg:block">
-              <p>
-                Alex Imports is the ultimate multivendor marketplace, connecting
-              </p>
-              <p>shoppers with trusted sellers, curated collections,</p>
-              <p>and a seamless shopping experience.</p>
-            </div>
-
-            <button className="px-7 py-3 mx-auto md:mx-0 bg-primary text-white rounded-md font-semibold hover:bg-primary/80 transition">
+            <button className="px-6 py-3 bg-primary text-white rounded-md font-semibold hover:bg-primary/80 transition self-center md:self-start">
               Explore Collections
             </button>
           </div>
         </div>
 
         {/* Scrolling header */}
-        <div className="big-header-wrapper overflow-hidden">
-          <h1
-            ref={headerRef}
-            className="text-heading-0 uppercase w-max big-header"
-          >
-            Your Multivendor Marketplace for Everything
-          </h1>
-        </div>
+        <div className="big-header-wrapper overflow-hidden py-12 md:py-16 lg:py-20">
+  <h1
+    ref={headerRef}
+    className="
+      text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 
+      uppercase font-extrabold w-max big-header
+    "
+  >
+    Your Multivendor Marketplace for Everything
+  </h1>
+</div>
+
       </div>
 
       <SocialProof />

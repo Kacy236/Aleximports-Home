@@ -29,7 +29,7 @@ const siteLinks = [
   },
   {
     label: "Explore",
-    pathname: "/grants",
+    pathname: "/explore",
   },
 ];
 
@@ -103,7 +103,13 @@ export default function NavBar() {
         ))}
 
         <motion.li variants={itemVariants} key={"item-one"}>
-          <Link href="/#about">About</Link>
+          <a href="#about" onClick={() => {
+        // Optional: scroll smoothly to the section
+        const aboutSection = document.getElementById("about");
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }}>About</a>
         </motion.li>
 
       </motion.ul>
@@ -258,23 +264,21 @@ export function HiddenNav() {
                   </div>
                 ))}
 
-                <div className="menu-link-item text-muted-foreground">
-                  <motion.li
-                    variants={itemVariants}
-                    className="menu-link-item-holder flex gap-7"
-                  >
-                    <span>04</span>
-                    <span>Get free updates</span>
-                  </motion.li>
-                </div>
 
                 <div className="menu-link-item text-muted-foreground">
                   <motion.li
                     variants={itemVariants}
                     className="menu-link-item-holder"
                   >
-                    <a href="#about" className="flex gap-7">
-                      <span>05</span>
+                    <a href="#about" className="flex gap-7" onClick={() => {
+        toggleNav(); // close the mobile menu
+        // Optional: scroll smoothly to the section
+        const aboutSection = document.getElementById("about");
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }}>
+                      <span>03</span>
                       <span>About</span>
                       
                     </a>

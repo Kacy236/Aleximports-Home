@@ -47,11 +47,11 @@ export default function TestimonialSection() {
         </h1>
       </div>
 
-      <Slider className="mt-7 px-4 sm:px-0">
+      <Slider className="mt-7 px-2 sm:px-0">
         {testimonials.map((testimonial, idx) => (
           <div
             key={idx}
-            className="bg-white flex flex-col rounded-md w-full sm:w-testimonial-card min-w-[250px] p-4 sm:p-6 mx-2"
+            className="bg-white flex flex-col rounded-md w-[90vw] sm:w-[320px] max-w-[350px] p-4 sm:p-6 mx-2 shrink-0"
           >
             <p className="pb-4 text-paragraph text-sm sm:text-base">
               "{testimonial.feedback}"
@@ -62,7 +62,11 @@ export default function TestimonialSection() {
 
               <div className="flex gap-1 sm:gap-2 mt-2 sm:mt-0">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <StarIcon key={i} weight="fill" className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
+                  <StarIcon
+                    key={i}
+                    weight="fill"
+                    className="text-primary w-4 h-4 sm:w-5 sm:h-5"
+                  />
                 ))}
               </div>
             </div>

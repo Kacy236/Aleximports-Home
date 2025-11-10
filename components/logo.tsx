@@ -12,29 +12,22 @@ const poppins = Poppins({
 
 export default function Logo() {
   const [showLogo, setShowLogo] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
+      // only show logo near the top
       if (currentScrollY < 50) {
-        // always show logo near top
-        setShowLogo(true);
-      } else if (currentScrollY < lastScrollY) {
-        // scrolling up
         setShowLogo(true);
       } else {
-        // scrolling down
         setShowLogo(false);
       }
-
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <Link
