@@ -61,28 +61,30 @@ export default function HeroSectionTwo() {
 
           <div className="md:col-start-5 col-span-full grid md:block">
             {/* Large screens */}
-            <div className="hidden sm:block md:hidden lg:block">
-              <h1 className="text-heading-one text-center lg:text-left">
-                Discover top products from
-              </h1>
-              <h1 className="text-heading-one text-center lg:text-left">
-                trusted vendors worldwide
-              </h1>
-            </div>
+            {/* Large screens */}
+<div className="hidden sm:block md:hidden lg:block">
+  <h1 className="text-5xl md:text-4xl font-bold text-center lg:text-left">
+    Discover top products from
+  </h1>
+  <h1 className="text-5xl md:text-4xl font-bold text-center lg:text-left">
+    trusted vendors worldwide
+  </h1>
+</div>
 
-            {/* Medium screens */}
-            <div className="hidden text-center md:text-left md:block lg:hidden">
-              <h1 className="text-heading-one">Discover top products</h1>
-              <h1 className="text-heading-one">from trusted vendors</h1>
-              <h1 className="text-heading-one">worldwide</h1>
-            </div>
+{/* Medium screens */}
+<div className="hidden md:block lg:hidden text-center md:text-left">
+  <h1 className="text-4xl sm:text-3xl font-bold">Discover top products</h1>
+  <h1 className="text-4xl sm:text-3xl font-bold">from trusted vendors</h1>
+  <h1 className="text-4xl sm:text-3xl font-bold">worldwide</h1>
+</div>
 
-            {/* Small screens */}
-            <div className="sm:hidden text-center">
-              <h1 className="text-heading-one">Discover top products</h1>
-              <h1 className="text-heading-one">from trusted vendors</h1>
-              <h1 className="text-heading-one">worldwide</h1>
-            </div>
+{/* Small screens */}
+<div className="sm:hidden text-center">
+  <h1 className="text-3xl font-bold">Discover top products</h1>
+  <h1 className="text-3xl font-bold">from trusted vendors</h1>
+  <h1 className="text-3xl font-bold">worldwide</h1>
+</div>
+
 
             {/* Description */}
             <div className="sm:hidden md:block lg:hidden my-3 text-center md:text-left">

@@ -1,3 +1,5 @@
+"use client";
+
 import FloatingNav from "@/components/floating-nav";
 import NavBar, { HiddenNav } from "@/components/navbar";
 import AboutSection from "@/components/sections/about-us";
@@ -10,26 +12,49 @@ import SocialProof from "@/components/sections/social-proof";
 import TestimonalSection from "@/components/sections/testimonials-section";
 import Booker from "@/components/cal-component";
 import HeroSectionTwo from "@/components/sections/hero-section-two.homepage";
-import SecondHero from "@/components/sections/second-hero"
+import SecondHero from "@/components/sections/second-hero";
 
 export default function Home() {
   return (
-    <div className="absolute inset-0 z-[1]">
-      <NavBar />
-      <HeroSection />
-      <HiddenNav />
+    <div className="relative z-10">
+      {/* Navbar */}
+      <div className="md:hidden">
+        {/* Mobile Navbar */}
+        <NavBar />
+        <HiddenNav />
+      </div>
 
-      <Booker />
-      <SocialProof />
-      <AboutSection />
-      {/* <MeetOurTeam /> */}
-      <SecondHero/>
-      <HeroSectionTwo/>
-      
-      <OurServices />
-      <TestimonalSection />
-      <CallToActionSection />
-      <Footer />
+      <div className="hidden md:block">
+        {/* Desktop Navbar */}
+        <NavBar />
+        <HiddenNav />
+      </div>
+
+      {/* Hero Sections */}
+      <div className="w-full">
+        <HeroSection />
+        <SecondHero />
+        <HeroSectionTwo />
+      </div>
+
+      {/* Floating Booker */}
+      <div className="w-full">
+        <Booker />
+      </div>
+
+      {/* Content Sections */}
+      <div className="w-full px-4 md:px-16 space-y-12">
+        <SocialProof />
+        <AboutSection />
+        <OurServices />
+        <TestimonalSection />
+        <CallToActionSection />
+      </div>
+
+      {/* Footer */}
+      <div className="w-full">
+        <Footer />
+      </div>
     </div>
   );
 }
