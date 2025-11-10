@@ -40,25 +40,29 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <div className="pt-16 pb-48 bg-background-gray">
-      <div className="px-4">
-        <h1 className="text-heading-0 font-bold">What Our Vendors Say</h1>
+    <div className="pt-16 pb-32 bg-background-gray">
+      <div className="px-4 max-w-[1200px] mx-auto">
+        <h1 className="text-heading-0 font-bold text-center sm:text-left">
+          What Our Vendors Say
+        </h1>
       </div>
 
-      <Slider className="mt-7">
+      <Slider className="mt-7 px-4 sm:px-0">
         {testimonials.map((testimonial, idx) => (
           <div
             key={idx}
-            className="bg-white flex flex-col rounded-sm w-testimonial-card p-4"
+            className="bg-white flex flex-col rounded-md w-full sm:w-testimonial-card min-w-[250px] p-4 sm:p-6 mx-2"
           >
-            <p className="pb-4 text-paragraph">"{testimonial.feedback}"</p>
+            <p className="pb-4 text-paragraph text-sm sm:text-base">
+              "{testimonial.feedback}"
+            </p>
 
-            <div className="p-4 border-t border-primary mt-auto flex text-paragraph justify-between">
-              <span className="font-bold">{testimonial.name}</span>
+            <div className="p-4 border-t border-primary mt-auto flex flex-col sm:flex-row justify-between items-start sm:items-center text-paragraph gap-2 sm:gap-0">
+              <span className="font-bold text-sm sm:text-base">{testimonial.name}</span>
 
-              <div className="flex gap-2">
+              <div className="flex gap-1 sm:gap-2 mt-2 sm:mt-0">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <StarIcon key={i} weight="fill" className="text-primary" />
+                  <StarIcon key={i} weight="fill" className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
                 ))}
               </div>
             </div>

@@ -15,7 +15,7 @@ export default function MeetOurTeam() {
     },
     {
       title: "CTO & Co-Founder",
-      img: "/cto.png",
+      img: "/cto.jpg",
       name: "Kelechi Ndubuisi",
       desc1:
         "Kelechi Ndubuisi leads the company’s technological innovation. As a co-founder, he designs scalable, secure, and intuitive digital systems that power our vendor and customer experiences.",
@@ -24,7 +24,7 @@ export default function MeetOurTeam() {
     },
     {
       title: "CFO & Co-Founder",
-      img: "/cfo.png",
+      img: "/cfo.jpg",
       name: "Chisom Maduakor",
       desc1:
         "Chisom Maduakor is a finance and operations expert who oversees the company’s financial strategy, ensuring sustainability and smart growth.",
