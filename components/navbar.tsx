@@ -29,7 +29,7 @@ const siteLinks = [
   },
   {
     label: "Explore",
-    pathname: "/grant",
+    pathname: "/grants",
   },
 ];
 
