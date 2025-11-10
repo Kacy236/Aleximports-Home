@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { ShoppingBag } from "lucide-react";
 import { useScroll, useTransform, motion } from "motion/react";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -104,6 +105,7 @@ const MainHero = () => {
           </h1>
         </div>
 
+        <Link href="https://aleximports.vercel.app/" target="_blank" rel="noopener noreferrer">
         <Button
           size="sm"
           className="rounded-sm font-semibold mt-4 md:hidden w-max mx-auto flex items-center gap-2"
@@ -111,6 +113,7 @@ const MainHero = () => {
           <ShoppingBag strokeWidth={1} size={20} />
           Visit Store
         </Button>
+        </Link>
       </div>
     </div>
   );
