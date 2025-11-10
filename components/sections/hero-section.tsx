@@ -2,10 +2,10 @@
 import NavBar from "@/components/navbar";
 import { Button } from "../ui/button";
 import CellCapitalPrimaryButton from "../cell-capital-button";
-import { ArrowDown, CircleDollarSign, Rocket } from "lucide-react";
+import { ArrowDown, CircleDollarSign, Rocket, ShoppingBag } from "lucide-react";
 import { useScroll, useTransform, motion } from "motion/react";
 import { useRef } from "react";
-import { useConsultationFormContext } from "../providers/consultation-provider";
+
 
 export default function HeroSection() {
   return (
@@ -22,7 +22,6 @@ function VideoBackground() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-
     offset: ["30% 80%", "end end"],
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.9]);
@@ -41,7 +40,7 @@ function VideoBackground() {
               playsInline
               className="min-w-full min-h-full object-cover z-[-1] blur-video"
             >
-              <source src="/video/cell-capital-video.mp4" type="video/mp4" />
+              <source src="/video/logistics-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="backdrop-overlay"></div>
@@ -63,7 +62,7 @@ function MobileVideoBackground() {
           playsInline
           className="min-w-full min-h-full object-cover z-[-1] blur-video"
         >
-          <source src="/video/cell-capital-video.mp4" type="video/mp4" />
+          <source src="/video/logistics-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="backdrop-overlay"></div>
@@ -75,32 +74,31 @@ function MobileVideoBackground() {
 function RemainingHeroTextContent() {
   return (
     <div className="md:pb-30 mt-10 md:mt-0 px-4">
-      <h2 className="md:text-heading-one text-center mx-auto text-paragraph max-w-[40ch]">
-        At Cell Capital we are passionate about securing grants for business &
-        non-profits through expert consulting, research, and compelling Grant
-        Proposals or Business Plan
+      <h2 className="md:text-heading-one text-center mx-auto text-paragraph max-w-[50ch]">
+        Alex Imports is your all-in-one multivendor marketplace, connecting shoppers
+        with the best products from trusted sellers worldwide. Shop, sell, and grow
+        your business with ease.
       </h2>
     </div>
   );
 }
 
 const MainHero = () => {
-  const { toggleConsultationForm } = useConsultationFormContext()
   return (
-    <div className="grid  px-4 md:pt-35 pt-30">
+    <div className="grid px-4 md:pt-35 pt-30">
       <div className="justify-self-center self-center flex flex-col">
         <div className="mx-auto">
-          <h1 className="text-heading-0 font-bold max-w-[20ch]  text-center mx-auto">
-            $15million secured in debt free Grants. You could be next!
+          <h1 className="text-heading-0 font-bold max-w-[30ch] text-center mx-auto">
+            Discover thousands of products from top vendors. Start shopping today!
           </h1>
         </div>
 
         <Button
           size="sm"
-          onClick={toggleConsultationForm}
           className="rounded-sm font-semibold mt-4 md:hidden w-max mx-auto"
         >
-          Book a consultation
+          <ShoppingBag strokeWidth={1} size={20} /> 
+          Start Shopping
         </Button>
       </div>
     </div>

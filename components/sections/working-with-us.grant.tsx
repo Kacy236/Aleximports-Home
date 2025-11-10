@@ -1,6 +1,6 @@
 "use client";
 import { CircleDollarSign, Crown, Sparkles, Trophy } from "lucide-react";
-import TestimonalSection from "./testimonials-section";
+import TestimonialSection from "./testimonials-section";
 
 export default function WorkingWithUs() {
   return (
@@ -10,14 +10,14 @@ export default function WorkingWithUs() {
           <div>
             <CircleDollarSign className="w-icon h-icon" />
             <h2 className="font-bold text-paragraph mt-12">
-              Effortless Funding
+              Easy Sales Management
             </h2>
           </div>
 
           <div className="mt-2">
             <p className="text-paragraph max-w-[30ch]">
-              Our all-in-one grant solution handles everything, freeing you to
-              concentrate on scaling your organization with confidence.
+              Manage your products, track orders, and handle payments seamlessly
+              so you can focus on growing your business.
             </p>
           </div>
         </div>
@@ -26,15 +26,14 @@ export default function WorkingWithUs() {
           <div>
             <Crown className="w-icon h-icon" />
             <h2 className="font-bold text-paragraph mt-12">
-              Premium Opportunities
+              Boost Your Visibility
             </h2>
           </div>
 
           <div className="mt-2">
             <p className="text-paragraph max-w-[30ch]">
-              Unlock premium grants crafted specifically, for small business,
-              non-profits or social enterprises empowering your vision with. the
-              funding you deserve.
+              Get access to a large, engaged customer base and showcase your
+              products to thousands of potential buyers.
             </p>
           </div>
         </div>
@@ -42,13 +41,15 @@ export default function WorkingWithUs() {
         <div className="bg-white p-7 rounded-md">
           <div>
             <Sparkles className="w-icon h-icon" />
-            <h2 className="font-bold text-paragraph mt-12">Remain Unique</h2>
+            <h2 className="font-bold text-paragraph mt-12">
+              Stand Out From Competitors
+            </h2>
           </div>
 
           <div className="mt-2">
             <p className="text-paragraph max-w-[30ch]">
-              Secure funding with a expertly crafted proposal and strategic plan
-              designed to make your application shine.
+              Present your brand professionally with custom listings, images,
+              and descriptions that capture your unique offerings.
             </p>
           </div>
         </div>
@@ -57,21 +58,21 @@ export default function WorkingWithUs() {
           <div>
             <Trophy className="w-icon h-icon" />
             <h2 className="font-bold text-paragraph mt-12">
-              Join the Winning Team
+              Grow With Confidence
             </h2>
           </div>
 
           <div className="mt-2">
             <p className="text-paragraph max-w-[30ch]">
-              Join countless entrepreneurs & change makers in leveraging our
-              proven strategies to unlock funding and achieve their dreams.
+              Join a thriving marketplace community and leverage tools and
+              insights designed to help your store succeed.
             </p>
           </div>
         </div>
       </div>
 
       <div className="mt-16">
-        <TestimonalSection />
+        <TestimonialSection />
       </div>
     </section>
   );

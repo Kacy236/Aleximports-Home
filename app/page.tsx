@@ -9,6 +9,8 @@ import MeetOurTeam from "@/components/sections/about-us";
 import SocialProof from "@/components/sections/social-proof";
 import TestimonalSection from "@/components/sections/testimonials-section";
 import Booker from "@/components/cal-component";
+import HeroSectionTwo from "@/components/sections/hero-section-two.homepage";
+import SecondHero from "@/components/sections/second-hero"
 
 export default function Home() {
   return (
@@ -21,6 +23,9 @@ export default function Home() {
       <SocialProof />
       <AboutSection />
       {/* <MeetOurTeam /> */}
+      <SecondHero/>
+      <HeroSectionTwo/>
+      
       <OurServices />
       <TestimonalSection />
       <CallToActionSection />

@@ -28,12 +28,8 @@ const siteLinks = [
     pathname: "/",
   },
   {
-    label: "Grants",
+    label: "Explore",
     pathname: "/grants",
-  },
-  {
-    label: "Business Plan",
-    pathname: "/business-plan",
   },
 ];
 
@@ -110,19 +106,10 @@ export default function NavBar() {
           <Link href="/#about">About</Link>
         </motion.li>
 
-        <motion.li variants={itemVariants} key={"item-two"}>
-          Get free updates
-        </motion.li>
       </motion.ul>
 
       <div className="flex gap-4  items-center fixed top-2 right-4 z-10 ">
-        <button
-          onClick={toggleCart}
-          className="gap-1 items-center hidden md:flex cursor-pointer"
-        >
-          <ShoppingBag strokeWidth={1} size={20} />
-          <span>{cart.length === 0 ? "" : cart.length}</span>
-        </button>
+        
 
         <motion.div
           layout
@@ -131,13 +118,16 @@ export default function NavBar() {
           className="hidden md:flex gap-1 items-center rounded-sm p-1  overflow-hidden"
         >
           <motion.div className="flex gap-2 items-center" layout>
-            <Button
-              size="sm"
-              className="hidden md:flex rounded-sm font-semibold text-sm cursor-pointer"
-              onClick={() => toggleConsultationForm()}
-            >
-              Book a consultation
-            </Button>
+          <Link href="https://aleximports.vercel.app/" target="_blank" rel="noopener noreferrer">
+  <Button
+    size="lg"
+    className="hidden md:flex rounded-md font-semibold text-base px-6 py-3 cursor-pointer"
+  >
+    <ShoppingBag strokeWidth={1} size={20} />
+    Visit Shop
+  </Button>
+</Link>
+
           </motion.div>
 
           <AnimatePresence>
@@ -160,13 +150,7 @@ export default function NavBar() {
         </motion.div>
       </div>
 
-      <button
-        onClick={toggleCart}
-        className="flex mix-blend-difference gap-1 md:hidden items-center text-white fixed right-15 top-[13px] z-10  text-body cursor-pointer"
-      >
-        <ShoppingBag strokeWidth={1} size={20} />
-        <span>{cart.length === 0 ? "" : cart.length}</span>
-      </button>
+      
       <AlignJustify
         strokeWidth={1}
         size={30}
@@ -292,6 +276,7 @@ export function HiddenNav() {
                     <a href="#about" className="flex gap-7">
                       <span>05</span>
                       <span>About</span>
+                      
                     </a>
                   </motion.li>
                 </div>

@@ -1,68 +1,63 @@
 import Divider from "../divider";
-import PricingComponent from "../pricing-component";
+import PricingComponent from "../pricing-component"; // You can rename this to CollectionCard or something more generic if you like
 
-const grantPackages = [
+const featuredCollections = [
   {
-    title: "Bronze Starter Pack",
+    title: "Electronics Essentials",
     label:
-      "For organizations new to grants or those with limited budgets who want professional support to get started",
-    price: "$300",
+      "Top-rated electronics and gadgets from trusted vendors to upgrade your tech",
     perks: [
-      "Comprehensive Grant Proposal",
-      "A List of 3 Premium Grants",
-      "Free Consultation ( 30 minutes )",
-      "3 Revision Rounds",
+      "Curated selection of 50+ products",
+      "Exclusive vendor discounts",
+      "Fast shipping options",
+      "Customer reviews & ratings",
     ],
-    packageLink: "bronze",
+    packageLink: "electronics-essentials",
   },
   {
-    title: "Get On The Move!",
+    title: "Fashion & Accessories",
     label:
-      "Ideal For organizations eager to pursue multiple funding opportunities with expert support",
-    price: "$500",
+      "Discover the latest trends from multiple fashion vendors for every style",
     perks: [
-      "Comprehensive Grant Proposal",
-      "A List of 4 Premium Grants",
-      "Writing & Application for 3 Grants of your choice",
-      "Free Consultation( 30 minutes )",
-      "3 Revision Rounds",
+      "Curated selection of 100+ products",
+      "Seasonal collections",
+      "Exclusive vendor discounts",
+      "Customer reviews & ratings",
     ],
-    packageLink: "get-on-the-move",
+    packageLink: "fashion-accessories",
     isRecommended: true,
   },
   {
-    title: "Go All The Way!!",
+    title: "Home & Living",
     label:
-      "Perfect For organizations committed to pursuing every funding opportunity with maximum impact",
-    price: "$1000",
+      "Quality products from trusted vendors to beautify your home and lifestyle",
     perks: [
-      "Comprehensive Grant Proposal",
-      "A List of 5 Premium Grants",
-      "Writing & Application for 5 Grants of your choice",
-      "Free Consultation( 45 minutes )",
-      "3 Revision Rounds",
+      "Curated selection of 80+ products",
+      "Premium vendor deals",
+      "Fast shipping options",
+      "Customer reviews & ratings",
     ],
-    packageLink: "go-all-the-way",
+    packageLink: "home-living",
   },
 ];
 
-export default function GrantPackages() {
+export default function FeaturedCollections() {
   return (
-    <section id="packages" className="py-16">
+    <section id="collections" className="py-16">
       <div className="py-16 px-4">
         <div>
           <h1 className="text-heading-0 text-center font-bold">
-            Our grant packages
+            Explore Our Collections
           </h1>
         </div>
 
-        <p className="text-paragraph text-center mx-auto max-w-[33ch] mt-2">
-          We offer grant packages simplify the complex grant application process
+        <p className="text-paragraph text-center mx-auto max-w-[40ch] mt-2">
+          Browse curated collections from top vendors across multiple categories
         </p>
 
         <div className="grid md:grid-cols-3 mt-16 gap-4">
-          {grantPackages.map((grantPackage, index) => (
-            <PricingComponent grantPackage={grantPackage} key={index} />
+          {featuredCollections.map((collection, index) => (
+            <PricingComponent grantPackage={collection} key={index} />
           ))}
         </div>
       </div>

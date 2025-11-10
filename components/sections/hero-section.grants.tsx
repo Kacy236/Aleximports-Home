@@ -1,13 +1,11 @@
-"use client";
+"use client"; 
 import { motion, useScroll, useTransform } from "motion/react";
-import CellCapitalPrimaryButton from "../cell-capital-button";
 import NavBar from "../navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
-import { useConsultationFormContext } from "../providers/consultation-provider";
 
-export default function HeroGrantsSection() {
+export default function HeroCollectionsSection() {
   return (
     <div className="min-h-screen bg-background-gray pb-16 md:pb-0">
       <MainHero />
@@ -22,7 +20,6 @@ function VideoBackground() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-
     offset: ["30% 80%", "end end"],
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.9]);
@@ -41,7 +38,7 @@ function VideoBackground() {
               playsInline
               className="min-w-full min-h-full object-cover z-[-1] blur-video"
             >
-              <source src="/video/cell-capital-video.mp4" type="video/mp4" />
+              <source src="/video/payment.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="backdrop-overlay"></div>
@@ -63,7 +60,7 @@ function MobileVideoBackground() {
           playsInline
           className="min-w-full min-h-full object-cover z-[-1] blur-video"
         >
-          <source src="/video/cell-capital-video.mp4" type="video/mp4" />
+          <source src="/video/payment.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="backdrop-overlay"></div>
@@ -75,9 +72,9 @@ function MobileVideoBackground() {
 function RemainingHeroTextContent() {
   return (
     <div className="md:pb-30 mt-10 md:mt-0 px-4">
-      <h2 className="md:text-heading-one text-center mx-auto text-paragraph max-w-[40ch]">
-        Our all in one grant program handles everything freeing you to
-        concentrate on scaling your organization with confidence.
+      <h2 className="md:text-heading-one text-center mx-auto text-paragraph max-w-[50ch]">
+        Discover thousands of products from top vendors worldwide. Browse categories,
+        explore collections, and find everything you need to shop or sell with ease.
       </h2>
     </div>
   );
@@ -85,22 +82,20 @@ function RemainingHeroTextContent() {
 
 function MainHero() {
   return (
-    <div className="grid  px-4 md:pt-35 pt-30">
+    <div className="grid px-4 md:pt-35 pt-30">
       <div className="justify-self-center self-center flex flex-col">
         <div className="mx-auto">
-          <h1 className="text-heading-0 font-bold max-w-[20ch]  text-center mx-auto">
-            Scale your business while we secure the funding to keep you at the
-            top
+          <h1 className="text-heading-0 font-bold max-w-[30ch] text-center mx-auto">
+            Shop, sell, and explore the best products from trusted vendors today!
           </h1>
         </div>
 
         <Button
-          asChild
           size="lg"
-          className="mt-2 bg-white w-max mx-auto border-primary border text-[18px]"
+          className="mt-4 bg-white w-max mx-auto border-primary border text-[18px]"
         >
-          <a className="flex gap-2 items-center " href="#packages">
-            <span className="font-bold"> See our grant plans</span>{" "}
+          <a className="flex gap-2 items-center" href="#collections">
+            <span className="font-bold">Explore Collections</span>
             <span className="h-2 w-2 rounded-full bg-primary"></span>
           </a>
         </Button>

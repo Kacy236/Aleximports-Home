@@ -1,3 +1,4 @@
+"use client";
 import Divider from "../divider";
 import {
   Accordion,
@@ -11,90 +12,75 @@ export default function Faq() {
     <div className="bg-background-gray py-4">
       <div className="pb-16 px-4">
         <h1 className="text-heading-0 font-bold max-w-[22ch]">
-          Frequently asked questions
+          Frequently Asked Questions
         </h1>
 
         <div className="mt-8 max-w-[700px] text-paragraph">
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
               <AccordionTrigger>
-                What is grant writing and why do I need it?
+                How do I start selling on Alex Imports?
               </AccordionTrigger>
               <AccordionContent>
-                Grant writing is the process of creating a proposal that
-                outlines your business idea and why you believe it is deserving
-                of grant funding. It's an essential skill for any business owner
-                looking to secure funding for their company. Our grant writing
-                package can help you navigate this process successfully and
-                increase your chances of securing the funding you need to start
-                or grow your business businesses.
+                Signing up is simple! Create an account, set up your store profile,
+                and start listing your products. Our platform guides you through 
+                the process to ensure your shop is ready to attract customers.
               </AccordionContent>
             </AccordionItem>
+
             <AccordionItem value="item-2">
               <AccordionTrigger>
-                Do I need good credit to get grants?
+                Are there any fees to sell on Alex Imports?
               </AccordionTrigger>
               <AccordionContent>
-                No credit checks are done during the process of applying to
-                grants. You will not need to have good to apply or win grants at
-                any point.
+                We offer a fair commission-based system. You only pay a small
+                percentage when you make a sale. There are no hidden subscription
+                fees or upfront costs, making it easy to start selling right away.
               </AccordionContent>
             </AccordionItem>
+
             <AccordionItem value="item-3">
               <AccordionTrigger>
-                Is it guaranteed that I will get a grant if Cell Capital Applies
-                For Me?
+                How do I get paid for my sales?
               </AccordionTrigger>
               <AccordionContent>
-                No one can guarantee you will win as grants are competition
-                based. We have to go through the process as everyone. Our grant
-                writing services offer more expertise and support throughout the
-                grant application process. Our professional grant writers have
-                experience in identifying suitable grants, understanding
-                criteria, and crafting compelling proposals. They can help save
-                time, improve the quality of your application, and increase your
-                chances of securing funding.
+                Payments are processed securely through our integrated system. 
+                You will receive payouts directly to your bank account or chosen 
+                payment method, usually within a few business days after a sale.
               </AccordionContent>
             </AccordionItem>
+
             <AccordionItem value="item-4">
               <AccordionTrigger>
-                How long does it take to win grants?
+                Can I sell products internationally?
               </AccordionTrigger>
               <AccordionContent>
-                We have had clients win in as little as 4 weeks and some take up
-                to 12 months to see there first winnings with consistent
-                applying. We will help you navigate this process.
+                Yes! Alex Imports allows sellers to reach customers both locally 
+                and internationally. You can set shipping options and prices 
+                for different regions to expand your market reach.
               </AccordionContent>
             </AccordionItem>
+
             <AccordionItem value="item-5">
               <AccordionTrigger>
-                Are there grants for my business?
+                What types of products can I sell?
               </AccordionTrigger>
               <AccordionContent>
-                Our grant writers have access to various resources, such as
-                grant databases, grant directories, and industry networks. They
-                use their research skills and knowledge to identify grants that
-                align with your business's objectives, industry, and specific
-                needs. Their expertise ensures you focus on grants where you
-                have the best chance of success. There are grants for every
-                business and any industry. We do not offer grant assistance for
-                the following: Real Estate professionals looking to acquire real
-                property. Cannabis industry, tobacco products, adult
-                entertainment, Start-up Non profits, or Individuals without a
-                registered businesses, credit repair or funding businesses, and
-                franchise businesses.
+                You can sell a wide range of products, from electronics and fashion 
+                to handmade goods and digital items. However, prohibited items 
+                include illegal products, counterfeit goods, and items restricted 
+                by law.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-6">
-              <AccordionTrigger>What do you need from me?</AccordionTrigger>
+              <AccordionTrigger>
+                How do I manage my store and inventory?
+              </AccordionTrigger>
               <AccordionContent>
-                Once you sign up we will send you a questionnaire to understand
-                more about your business. This gives us an outline of who you
-                are and what your business does. We will then conduct extensive
-                research to provide you with the best proposal to help you win
-                grants. We need you to monitor your inbox for communication from
-                us and grantors.
+                Our seller dashboard makes it easy to manage your listings, track 
+                orders, and monitor inventory. You can update product details, 
+                track sales performance, and interact with customers all in one place.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

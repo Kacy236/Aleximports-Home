@@ -5,14 +5,15 @@ import { Button } from "../ui/button";
 export default function MeetOurTeam() {
   return (
     <div className="bg-background-gray py-16 px-4">
-      <div className="w-full grid lg:grid-cols-[1fr_1.8fr] gap-4">
-        <div className="bg-[#54514d] text-white  p-4">
-          <span className="bg-white text-primary p-3 uppercase font-bold block text-base w-max">
-            About our group
-          </span>
-          <div className="mt-4 grid">
-            <div className="mx-auto">
-              <div>
+      <div className="w-full grid lg:grid-cols-[1fr_1.8fr] gap-4 items-stretch">
+        {/* About our group */}
+        <div className="bg-[#54514d] text-white p-6 flex flex-col justify-between h-full">
+          <div>
+            <span className="bg-white text-primary p-3 uppercase font-bold block text-base w-max">
+              About our group
+            </span>
+            <div className="mt-4 grid">
+              <div className="mx-auto">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -26,226 +27,134 @@ export default function MeetOurTeam() {
                   ></path>
                 </svg>
               </div>
-              <p className="max-w-[30ch] mt-7 text-paragraph">
-                At Cell Capital, we believe that there are no limits to our
-                ability in helping businesses & nonprofits get funded! We guide
-                businesses and nonprofits to bold wins with clarity.
+
+              <p className="max-w-[36ch] mt-7 text-paragraph">
+                At Alex Imports, we believe growth has no limits. We empower
+                startups, entrepreneurs, and organizations to connect globally,
+                scale seamlessly, and unlock new opportunities with confidence.
+              </p>
+
+              <p className="max-w-[36ch] mt-4 text-paragraph">
+                Our mission is to simplify global trade and help African
+                businesses expand beyond borders. Through innovation, technology,
+                and trust, we’re building a bridge between vendors and customers
+                worldwide — making international commerce simple, fast, and
+                secure.
+              </p>
+
+              <p className="max-w-[36ch] mt-4 text-paragraph">
+                Every product, every partnership, and every feature we create is
+                driven by a shared vision: enabling sustainable growth and
+                connecting communities through commerce.
               </p>
             </div>
+          </div>
 
-            <Button
-              size="lg"
-              className="ml-auto uppercase text-base font-bold bg-white rounded-none  text-primary mt-7 cursor-pointer hover:bg-white"
+          <Button
+            size="lg"
+            className="ml-auto uppercase text-base font-bold bg-white rounded-none text-primary mt-7 cursor-pointer hover:bg-white"
+          >
+            Learn more
+          </Button>
+        </div>
+
+        {/* Co-Founders section */}
+        <div className="flex flex-col justify-between gap-4">
+          {[
+            {
+              title: "CEO & Co-Founder",
+              img: "/ceo.png",
+              name: "Emmanuel Maduakor",
+              desc1:
+                "Emmanuel Maduakor is a visionary entrepreneur with a strong background in business growth and community development. He drives Alex Imports’ mission of connecting African businesses to the global marketplace.",
+              desc2:
+                "With strategic insight and leadership, he ensures that the company maintains its values of excellence, transparency, and innovation.",
+            },
+            {
+              title: "CTO & Co-Founder",
+              img: "/cto.png",
+              name: "Kelechi Ndubuisi",
+              desc1:
+                "Kelechi Ndubuisi leads the company’s technological innovation. As a co-founder, he designs scalable, secure, and intuitive digital systems that power our vendor and customer experiences.",
+              desc2:
+                "He is passionate about using technology to simplify global commerce and make borderless trade accessible to everyone.",
+            },
+            {
+              title: "CF0 & Co-Founder",
+              img: "/cfo.png",
+              name: "Chisom Maduakor",
+              desc1:
+                "Chisom Maduakor is a finance and operations expert who oversees the company’s financial strategy, ensuring sustainability and smart growth.",
+              desc2:
+                "She plays a vital role in aligning financial structure with long-term goals — building a strong foundation for innovation, expansion, and community empowerment.",
+            },
+          ].map((member, index) => (
+            <div
+              key={index}
+              className="bg-white flex flex-col md:flex-row gap-8 p-6 items-stretch h-full min-h-[400px]"
             >
-              Learn more
-            </Button>
-          </div>
-        </div>
+              <div className="flex-shrink-0 flex items-center justify-center md:w-[340px]">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-[320px] h-[320px] object-cover rounded-md"
+                />
+              </div>
 
-        <div className="bg-white flex flex-col md:flex-row gap-4 p-4">
-          <div className="mx-auto md:m-0">
-            <img
-              src="/ceo.png"
-              alt="value four"
-              width={100}
-              height={100}
-              className="w-[350px] h-full"
-            />
-          </div>
-
-          <div>
-            <span className="block bg-primary text-white uppercase font-bold px-7 py-2 w-max">
-              founder and ceo
-            </span>
-
-            <p className="md:max-w-[40ch] text-base mt-4 text-paragraph">
-              Tochi Chimeremeze is the founder and driving force behind Cell
-              Capital. With a deep passion for community development and a
-              strong track record in Grant consulting, He launched Cell Capital
-              to address the gap between funders and the organizations doing
-              critical work on the ground. Prior to founding Cell Capital, Tochi
-              worked with local and regional profit businesses, helping them
-              develop project proposals, navigate complex funding processes, and
-              align their goals with funder priorities.
-            </p>
-
-            <p className="md:max-w-[40ch] text-base mt-4 text-paragraph">
-              As a leader, Tochi is both strategic and effective, guiding
-              clients through funding strategy sessions, reviewing narratives,
-              and mentoring early-stage nonprofits on organizational growth.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white flex gap-4 p-4 relative min-h-[400px]">
-          <span className="block bg-white z-2 absolute inset-4 h-max text-primary uppercase font-bold px-7 py-2 w-max">
-            Grant Writer
-          </span>
-          <div className="absolute inset-0">
-            <img
-              src="/vice.jpeg"
-              alt="value four"
-              width={100}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
-        <div className="bg-white flex flex-col md:flex-row gap-4 p-4">
-          <div className="mx-auto md:m-0">
-            <img
-              src="/director-of-media.png"
-              alt="value four"
-              width={100}
-              height={100}
-              className="w-[350px] h-full"
-            />
-          </div>
-
-          <div>
-            <span className="block bg-primary sm:w-max text-white uppercase font-bold px-7 py-2">
-              Director of media and communications
-            </span>
-
-            <p className="md:max-w-[40ch] text-paragraph mt-4">
-              Chinenye leads all media and communications at Cell Capital,
-              managing both client-facing content and the public voice of the
-              brand. With a background in digital storytelling, media
-              production, and nonprofit advocacy, she ensures that every message
-              Cell Capital puts out is aligned with its mission, values, and
-              audience.
-            </p>
-
-            <p className="md:max-w-[40ch] text-paragraph mt-4">
-              Her work includes overseeing social media campaigns, creating
-              internal and external communications strategies, and working
-              closely with clients to refine how they speak about their work.
-              She also plays a critical role in developing thought leadership
-              content for the team and maintaining communication flow between
-              departments.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white flex gap-4 p-4 relative min-h-[400px]">
-          <span className="block bg-white z-2 absolute inset-4 h-max text-primary uppercase font-bold px-7 py-2 w-max">
-            Director of adminstration
-          </span>
-          <div className="absolute inset-0">
-            <img
-              src="/director-of-adminstration.png"
-              alt="team image"
-              width={100}
-              height={100}
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-        </div>
-
-        <div className="bg-white flex flex-col md:flex-row gap-4 p-4">
-          <div className="mx-auto md:m-0">
-            <img
-              src="/director-of-marketing.jpeg"
-              alt="value four"
-              width={100}
-              height={100}
-              className="w-[300px] h-full"
-            />
-          </div>
-
-          <div>
-            <span className="block bg-primary text-white uppercase font-bold px-7 py-2 w-max">
-              Director of Marketing
-            </span>
-
-            <p className="md:max-w-[40ch] text-base mt-4 text-paragraph">
-              Laura combines her skills in branding, storytelling, and grant
-              writing to lead Cell Capital’s marketing efforts. With a
-              background in communications and a natural eye for design, she’s
-              helped countless organizations present themselves with clarity and
-              confidence to funders and partners. Laura joined Cell Capital with
-              a dual mission: to elevate how clients tell their stories and to
-              ensure the Cell Capital brand reflects the strength of its
-              services.
-            </p>
-
-            <p className="md:max-w-[40ch] text-paragraph mt-4">
-              She plays a key role in shaping both grant narratives and external
-              communications, including case studies, client spotlights, and
-              educational resources.
-            </p>
-          </div>
+              <div className="flex flex-col justify-center flex-grow">
+                <span className="block bg-primary text-white uppercase font-bold px-6 py-2 w-max">
+                  {member.title}
+                </span>
+                <h2 className="font-bold text-lg mt-3">{member.name}</h2>
+                <p className="text-base mt-3 text-paragraph">{member.desc1}</p>
+                <p className="text-base mt-4 text-paragraph">{member.desc2}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
+      {/* Our values */}
       <div className="py-16">
         <div>
-          <h1 className="text-heading-0 font-bold">Our values</h1>
+          <h1 className="text-heading-0 font-bold">Our Values</h1>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-16 mt-4">
-          <div className="bg-white p-7 rounded-md">
-            <div>
-              <CircleDollarSign className="w-icon h-icon" />
-              <h2 className="font-bold text-paragraph mt-12">
-                Effortless Funding
-              </h2>
-            </div>
-
-            <div className="mt-2">
-              <p className="text-paragraph max-w-[30ch]">
-                Our all-in-one grant solution handles everything, freeing you to
-                concentrate on scaling your organization with confidence.
-              </p>
-            </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <div className="bg-white p-7 rounded-md flex flex-col justify-between h-full">
+            <CircleDollarSign className="w-icon h-icon" />
+            <h2 className="font-bold text-paragraph mt-12">Effortless Trade</h2>
+            <p className="text-paragraph max-w-[30ch] mt-2">
+              We simplify international commerce so businesses can focus on what
+              they do best — creating and growing.
+            </p>
           </div>
 
-          <div className="bg-white p-7 rounded-md">
-            <div>
-              <Crown className="w-icon h-icon" />
-              <h2 className="font-bold text-paragraph mt-12">
-                Premium Opportunities
-              </h2>
-            </div>
-
-            <div className="mt-2">
-              <p className="text-paragraph max-w-[30ch]">
-                Unlock premium grants crafted specifically, for small business,
-                non-profits or social enterprises empowering your vision with.
-                the funding you deserve.
-              </p>
-            </div>
+          <div className="bg-white p-7 rounded-md flex flex-col justify-between h-full">
+            <Crown className="w-icon h-icon" />
+            <h2 className="font-bold text-paragraph mt-12">Excellence</h2>
+            <p className="text-paragraph max-w-[30ch] mt-2">
+              Our commitment to quality, integrity, and innovation drives
+              everything we do.
+            </p>
           </div>
 
-          <div className="bg-white p-7 rounded-md">
-            <div>
-              <Sparkles className="w-icon h-icon" />
-              <h2 className="font-bold text-paragraph mt-12">Remain Unique</h2>
-            </div>
-
-            <div className="mt-2">
-              <p className="text-paragraph max-w-[30ch]">
-                Secure funding with a expertly crafted proposal and strategic
-                plan designed to make your application shine.
-              </p>
-            </div>
+          <div className="bg-white p-7 rounded-md flex flex-col justify-between h-full">
+            <Sparkles className="w-icon h-icon" />
+            <h2 className="font-bold text-paragraph mt-12">Innovation</h2>
+            <p className="text-paragraph max-w-[30ch] mt-2">
+              We create forward-thinking solutions that empower entrepreneurs
+              across borders.
+            </p>
           </div>
 
-          <div className="bg-white p-7 rounded-md">
-            <div>
-              <Trophy className="w-icon h-icon" />
-              <h2 className="font-bold text-paragraph mt-12">
-                Join the Winning Team
-              </h2>
-            </div>
-
-            <div className="mt-2">
-              <p className="text-paragraph max-w-[30ch]">
-                Join countless entrepreneurs & change makers in leveraging our
-                proven strategies to unlock funding and achieve their dreams.
-              </p>
-            </div>
+          <div className="bg-white p-7 rounded-md flex flex-col justify-between h-full">
+            <Trophy className="w-icon h-icon" />
+            <h2 className="font-bold text-paragraph mt-12">Global Vision</h2>
+            <p className="text-paragraph max-w-[30ch] mt-2">
+              Our team is building a world where African products thrive on the
+              international stage — seamlessly and confidently.
+            </p>
           </div>
         </div>
       </div>

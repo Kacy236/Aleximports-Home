@@ -36,10 +36,10 @@ export default function PricingComponent({
 
       <div className="mt-4">
         <CellCapitalSecondaryButton
-          className="w-full bg-background-black text-background-black-foreground justify-between flex  py-7"
+          className="w-full bg-background-black text-background-black-foreground justify-between flex py-7"
           asChild
         >
-          <Link href={`/grants/${grantPackage.packageLink}`}>
+          <Link href="https://aleximports.vercel.app/" target="_blank" rel="noopener noreferrer">
             <span className="text-[18px]">Buy now</span>
             <ArrowRight size={14} />
           </Link>

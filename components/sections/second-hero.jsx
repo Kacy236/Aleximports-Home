@@ -1,0 +1,104 @@
+"use client";
+import NavBar from "@/components/navbar";
+import { Button } from "../ui/button";
+import CellCapitalPrimaryButton from "../cell-capital-button";
+import { ArrowDown, CircleDollarSign, Rocket } from "lucide-react";
+import { useScroll, useTransform, motion } from "motion/react";
+import { useRef } from "react";
+
+export default function SecondHero() {
+  return (
+    <div className="min-h-screen bg-background-gray pb-16 md:pb-0">
+      <MainHero />
+      <VideoBackground />
+      <MobileVideoBackground />
+      <RemainingHeroTextContent />
+    </div>
+  );
+}
+
+function VideoBackground() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["30% 80%", "end end"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.9]);
+  return (
+    <div ref={container} className="relative h-[300vh] hidden md:block">
+      <div className="sticky h-[85vh] top-0">
+        <div className="w-full h-full top-16 absolute flex flex-col items-center">
+          <motion.div
+            style={{ scale }}
+            className="relative w-[50vw] h-[50vh] rounded-md overflow-hidden"
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="min-w-full min-h-full object-cover z-[-1] blur-video"
+            >
+              <source src="/video/connecting.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="backdrop-overlay"></div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MobileVideoBackground() {
+  return (
+    <div className="relative md:hidden px-4 mt-10">
+      <div className="relative w-full h-[40vh] rounded-md overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="min-w-full min-h-full object-cover z-[-1] blur-video"
+        >
+          <source src="/video/connecting.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="backdrop-overlay"></div>
+      </div>
+    </div>
+  );
+}
+
+function RemainingHeroTextContent() {
+  return (
+    <div className="md:pb-30 mt-10 md:mt-0 px-4">
+      <h2 className="md:text-heading-one text-center mx-auto text-paragraph max-w-[50ch]">
+        Alex Imports — a place of connecting, no matter the distance. We bridge
+        the gap between buyers and sellers across the world, helping businesses
+        and customers thrive together.
+      </h2>
+    </div>
+  );
+}
+
+const MainHero = () => {
+  return (
+    <div className="grid px-4 md:pt-35 pt-30">
+      <div className="justify-self-center self-center flex flex-col">
+        <div className="mx-auto">
+          <h1 className="text-heading-0 font-bold max-w-[30ch] text-center mx-auto">
+            Connecting people and products, no matter where you are.
+          </h1>
+        </div>
+
+        <Button
+          size="sm"
+          className="rounded-sm font-semibold mt-4 md:hidden w-max mx-auto"
+        >
+          Start Connecting
+        </Button>
+      </div>
+    </div>
+  );
+};
