@@ -1,13 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import { CircleDollarSign, Crown, Sparkles, Trophy } from "lucide-react";
 import { Button } from "../ui/button";
+
+// Import actual image files (way more reliable for Vercel)
+import CEO from "@/public/ceo.png";
+import CTO from "@/public/cto.jpg";
+import CFO from "@/public/cfo.jpg";
 
 export default function MeetOurTeam() {
   const coFounders = [
     {
       title: "CEO & Co-Founder",
-      img: "/ceo.png",
+      img: CEO,
       name: "Emmanuel Maduakor",
       desc1:
         "Emmanuel Maduakor is a visionary entrepreneur with a strong background in business growth and community development. He drives Alex Imports’ mission of connecting African businesses to the global marketplace.",
@@ -16,7 +22,7 @@ export default function MeetOurTeam() {
     },
     {
       title: "CTO & Co-Founder",
-      img: "/cto.jpg",
+      img: CTO,
       name: "Kelechi Ndubuisi",
       desc1:
         "Kelechi Ndubuisi leads the company’s technological innovation. As a co-founder, he designs scalable, secure, and intuitive digital systems that power our vendor and customer experiences.",
@@ -25,7 +31,7 @@ export default function MeetOurTeam() {
     },
     {
       title: "CFO & Co-Founder",
-      img: "/cfo.jpg",
+      img: CFO,
       name: "Chisom Maduakor",
       desc1:
         "Chisom Maduakor is a finance and operations expert who oversees the company’s financial strategy, ensuring sustainability and smart growth.",
@@ -38,31 +44,28 @@ export default function MeetOurTeam() {
     <div id="about" className="bg-background-gray py-28 px-6 lg:py-40 lg:px-20">
       <div className="max-w-[1600px] mx-auto grid lg:grid-cols-[1.5fr_2.5fr] gap-12 lg:gap-20 items-start">
 
-        {/* LEFT SECTION — MATCH HEIGHT WITH RIGHT */}
+        {/* LEFT SIDE — MATCH HEIGHT WITH RIGHT */}
         <div className="bg-[#54514d] text-white p-10 lg:p-14 rounded-xl flex flex-col h-full">
-
-          {/* Make inside content stretch evenly */}
           <div className="flex-grow flex flex-col justify-between">
 
             <div>
-              <span className="bg-white text-primary p-4 uppercase font-bold text-xl lg:text-3xl w-max block">
-                About our group
+              <span className="bg-white text-primary p-4 uppercase font-bold text-xl lg:text-3xl block w-max">
+                About Our Group
               </span>
 
-              <div className="mt-8 lg:mt-12 grid gap-6 lg:gap-8">
-                <p className="max-w-full lg:max-w-[60ch] text-xl lg:text-3xl leading-relaxed">
+              <div className="mt-8 lg:mt-12 grid gap-6">
+                <p className="text-xl lg:text-3xl leading-relaxed max-w-[60ch]">
                   At Alex Imports, we believe growth has no limits. We empower
                   startups, entrepreneurs, and organizations to connect globally,
                   scale seamlessly, and unlock new opportunities with confidence.
                 </p>
 
-                <p className="max-w-full lg:max-w-[60ch] text-xl lg:text-3xl leading-relaxed">
+                <p className="text-xl lg:text-3xl leading-relaxed max-w-[60ch]">
                   Our mission is to simplify global trade and help African
-                  businesses expand beyond borders. Through innovation, technology,
-                  and trust, we’re building a bridge between vendors and customers
-                  worldwide — making international commerce simple, fast, and secure.
+                  businesses expand beyond borders. Through innovation,
+                  technology, and trust, we’re bridging vendors and customers
+                  worldwide — making commerce simple, fast, and secure.
                 </p>
-
               </div>
             </div>
 
@@ -70,29 +73,30 @@ export default function MeetOurTeam() {
               size="lg"
               className="uppercase text-lg lg:text-2xl font-bold bg-white text-primary mt-10 w-full lg:w-auto py-4 lg:py-6 px-10"
             >
-              Learn more
+              Learn More
             </Button>
           </div>
         </div>
 
-        {/* RIGHT SECTION — CO-FOUNDERS */}
+        {/* RIGHT SIDE — CO-FOUNDERS */}
         <div className="flex flex-col gap-8 lg:gap-12 h-full">
-
           {coFounders.map((member, idx) => (
             <div
               key={idx}
-              className="bg-white flex flex-col md:flex-row gap-5 md:gap-8 p-6 lg:p-8 items-start w-full rounded-xl shadow-lg"
+              className="bg-white flex flex-col md:flex-row gap-5 md:gap-8 p-6 lg:p-8 rounded-xl shadow-lg items-start w-full"
             >
-              <div className="flex-shrink-0 w-full md:w-[260px] lg:w-[300px] flex items-center justify-center">
-                <img
+              <div className="flex-shrink-0 w-full md:w-[260px] lg:w-[300px]">
+                <Image
                   src={member.img}
                   alt={member.name}
-                  className="w-full max-w-[260px] lg:max-w-[300px] h-auto md:h-[260px] lg:h-[300px] object-cover rounded-md"
+                  width={300}
+                  height={300}
+                  className="w-full h-[260px] lg:h-[300px] object-cover rounded-md"
                 />
               </div>
 
               <div className="flex flex-col flex-grow mt-4 md:mt-0">
-                <span className="block bg-primary text-white uppercase font-bold px-4 py-1.5 text-sm lg:text-base w-max rounded-sm">
+                <span className="bg-primary text-white uppercase font-bold px-4 py-1.5 text-sm lg:text-base w-max rounded-sm">
                   {member.title}
                 </span>
 
@@ -113,46 +117,49 @@ export default function MeetOurTeam() {
         </div>
       </div>
 
-      {/* Our Values */}
+      {/* OUR VALUES */}
       <div className="pt-12 lg:pt-16 max-w-[1600px] mx-auto">
         <h1 className="font-bold text-center lg:text-left text-3xl lg:text-5xl mb-10 lg:mb-12">
           Our Values
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-14">
-          <div className="bg-white p-6 lg:p-8 rounded-xl shadow-lg text-center lg:text-left">
-            <CircleDollarSign className="mx-auto lg:mx-0 text-4xl lg:text-5xl" />
-            <h2 className="font-bold mt-4 lg:mt-6 text-xl lg:text-2xl">Effortless Trade</h2>
-            <p className="mt-3 text-lg lg:text-xl leading-relaxed">
-              We simplify international commerce so businesses can focus on what they do best.
-            </p>
-          </div>
+          <ValueCard
+            icon={<CircleDollarSign className="text-4xl lg:text-5xl" />}
+            title="Effortless Trade"
+            text="We simplify global commerce so businesses can focus on creating and growing."
+          />
 
-          <div className="bg-white p-6 lg:p-8 rounded-xl shadow-lg text-center lg:text-left">
-            <Crown className="mx-auto lg:mx-0 text-4xl lg:text-5xl" />
-            <h2 className="font-bold mt-4 lg:mt-6 text-xl lg:text-2xl">Excellence</h2>
-            <p className="mt-3 text-lg lg:text-xl leading-relaxed">
-              Our commitment to quality, integrity, and innovation drives everything we do.
-            </p>
-          </div>
+          <ValueCard
+            icon={<Crown className="text-4xl lg:text-5xl" />}
+            title="Excellence"
+            text="Our commitment to quality, integrity, and innovation drives everything we do."
+          />
 
-          <div className="bg-white p-6 lg:p-8 rounded-xl shadow-lg text-center lg:text-left">
-            <Sparkles className="mx-auto lg:mx-0 text-4xl lg:text-5xl" />
-            <h2 className="font-bold mt-4 lg:mt-6 text-xl lg:text-2xl">Innovation</h2>
-            <p className="mt-3 text-lg lg:text-xl leading-relaxed">
-              We create forward-thinking solutions that empower entrepreneurs across borders.
-            </p>
-          </div>
+          <ValueCard
+            icon={<Sparkles className="text-4xl lg:text-5xl" />}
+            title="Innovation"
+            text="We build forward-thinking solutions that empower entrepreneurs everywhere."
+          />
 
-          <div className="bg-white p-6 lg:p-8 rounded-xl shadow-lg text-center lg:text-left">
-            <Trophy className="mx-auto lg:mx-0 text-4xl lg:text-5xl" />
-            <h2 className="font-bold mt-4 lg:mt-6 text-xl lg:text-2xl">Global Vision</h2>
-            <p className="mt-3 text-lg lg:text-xl leading-relaxed">
-              We are building a world where African products thrive internationally.
-            </p>
-          </div>
+          <ValueCard
+            icon={<Trophy className="text-4xl lg:text-5xl" />}
+            title="Global Vision"
+            text="We are building a world where African products thrive internationally."
+          />
         </div>
       </div>
+    </div>
+  );
+}
+
+/* Reusable Card Component */
+function ValueCard({ icon, title, text }) {
+  return (
+    <div className="bg-white p-6 lg:p-8 rounded-xl shadow-lg text-center lg:text-left">
+      <div className="mx-auto lg:mx-0">{icon}</div>
+      <h2 className="font-bold mt-4 lg:mt-6 text-xl lg:text-2xl">{title}</h2>
+      <p className="mt-3 text-lg lg:text-xl leading-relaxed">{text}</p>
     </div>
   );
 }
