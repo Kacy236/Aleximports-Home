@@ -39,7 +39,7 @@ export default function PricingComponent({
           className="w-full bg-background-black text-background-black-foreground justify-between flex py-7"
           asChild
         >
-          <Link href="https://aleximports.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <Link href="https:///" target="_blank" rel="noopener noreferrer">
             <span className="text-[18px]">Buy now</span>
             <ArrowRight size={14} />
           </Link>

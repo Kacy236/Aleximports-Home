@@ -124,7 +124,7 @@ export default function NavBar() {
           className="hidden md:flex gap-1 items-center rounded-sm p-1  overflow-hidden"
         >
           <motion.div className="flex gap-2 items-center" layout>
-          <Link href="https://aleximports.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.aleximportsshop.store/" target="_blank" rel="noopener noreferrer">
   <Button
     size="lg"
     className="hidden md:flex rounded-md font-semibold text-base px-6 py-3 cursor-pointer"
