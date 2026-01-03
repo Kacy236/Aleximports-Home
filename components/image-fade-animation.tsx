@@ -105,7 +105,7 @@ const MainHero = () => {
           </h1>
         </div>
 
-        <Link href="https://www.aleximportsshop.store/" target="_blank" rel="noopener noreferrer">
+        <Link href="https://aleximportsshop.store" target="_blank" rel="noopener noreferrer">
         <Button
           size="sm"
           className="rounded-sm font-semibold mt-4 md:hidden w-max mx-auto flex items-center gap-2"

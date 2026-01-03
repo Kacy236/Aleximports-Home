@@ -21,7 +21,7 @@ export default function CallToActionSection() {
 </p>
 
 
-        <Link href="https://www.aleximportsshop.store/sign-up" target="_blank">
+        <Link href="https://aleximportsshop.store/sign-up" target="_blank">
          <Button
            size="sm"
            className="bg-primary mx-auto mt-2 border border-white rounded-sm cursor-pointer items-center h-auto px-7 py-2 text-paragraph font-bold"
